@@ -11,6 +11,7 @@ html {
 * {
     margin: 0;
     padding: 0;
+ 
 }
 
 
@@ -39,6 +40,8 @@ body {
     border: 2px solid var(--border);
     width: 80%;
     background-color: var(--secondary);
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .divider {
@@ -62,7 +65,7 @@ a {
 }
 
 .border {
-    border: 2px solid red;
+    border: 5px solid red !important;
 }
 
 button {
