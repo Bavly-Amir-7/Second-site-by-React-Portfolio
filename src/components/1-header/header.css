@@ -56,14 +56,14 @@ header .theme:hover {
     border: 1px solid orange;
 }
 
-header .icon-close {
-    font-size: 1.5rem;
+header .icon-x1 {
+    font-size: 1rem;
     color: var(--subtitle);
     transition: transform 0.3s ease !important; 
 }
 
-.icon-close:hover {
-    font-size: 1.5rem;
+.icon-x1:hover {
+    font-size: 1rem;
     color: crimson;
     transform: rotate(180deg) !important; 
 }

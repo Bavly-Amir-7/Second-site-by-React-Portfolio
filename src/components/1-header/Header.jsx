@@ -27,7 +27,7 @@ export default function Header() {
       </nav>
 
       <button className='theme flex'>
-        <span className='icon-moon-o'></span>
+        <span className='icon-moon'></span>
       </button>
 
 
@@ -37,7 +37,7 @@ export default function Header() {
 
           <ul className="modal1">
             <li>
-              <button className="icon-close" onClick={() => setShowModal(false)}>
+              <button className="icon-x1" onClick={() => setShowModal(false)}>
               </button>
             </li>
             <li><a href="#">About</a></li>
