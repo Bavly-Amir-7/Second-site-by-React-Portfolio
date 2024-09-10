@@ -11,7 +11,7 @@ html {
 * {
     margin: 0;
     padding: 0;
- 
+
 }
 
 
@@ -74,4 +74,22 @@ button {
 
 button:active {
     scale: 0.9 !important;
+}
+
+@media (max-width: 1440px) {
+
+
+    .container {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    main section.right-section.flex {
+        flex-wrap: wrap;
+        column-gap: 14px;
+        row-gap: 2rem;
+        justify-content: center;
+
+    }
 }

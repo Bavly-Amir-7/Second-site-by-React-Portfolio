@@ -61,13 +61,14 @@ main section.right-section.flex {
     flex-wrap: wrap;
     column-gap: 16px;
     row-gap: 2rem;
+    justify-content: center;
 }
 
 .card1 {
     border: 1px solid rgba(93, 188, 252, 0.3);
     border-radius: 5px;
     transform: 0.3s;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+    background-image: linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.05));
 }
 
 .card1:hover {
@@ -144,7 +145,7 @@ main section.right-section.flex {
         width: 7rem;
         padding: 0.8rem 0;
         font-size: 0.9rem;
-
+        
     }
 
 }
