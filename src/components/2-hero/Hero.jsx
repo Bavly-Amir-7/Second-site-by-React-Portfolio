@@ -14,15 +14,15 @@ export default function Hero() {
 
 
 
-      <h1 className='title'>Front-End Developer. </h1>
-      <p className='sub-title'>I am Bavly Amir Makram, living in Giza, Egypt. A front-end developer specializing in React, dedicated to delivering modern and advanced tech solutions in my field.</p>
-      <div className="icons flex">
-        <div className="icon icon-x"></div>
-        <div className="icon icon-github"></div>
-        <div className="icon icon-facebook1"></div>
-        <div className="icon icon-gmail"></div>
-        <div className="icon icon-linkedin"></div>
-      </div>
+        <h1 className='title'>Front-End Developer. </h1>
+        <p className='sub-title'>I am Bavly Amir Makram, living in Giza, Egypt. A front-end developer specializing in React, dedicated to delivering modern and advanced tech solutions in my field.</p>
+        <div className="icons flex">
+          <div className="icon icon-x"></div>
+          <div className="icon icon-github"></div>
+          <div className="icon icon-facebook1"></div>
+          <div className="icon icon-gmail"></div>
+          <div className="icon icon-linkedin"></div>
+        </div>
 
 
       </div>

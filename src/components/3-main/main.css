@@ -67,7 +67,7 @@ main section.right-section.flex {
     border: 1px solid rgba(93, 188, 252, 0.3);
     border-radius: 5px;
     transform: 0.3s;
-    background-image: linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.05));
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
 }
 
 .card1:hover {
@@ -123,4 +123,28 @@ main section.right-section.flex {
 
 .icon-arrow-right2 {
     font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    main.flex {
+        flex-direction: column;
+        gap: 2.64rem;
+        align-items: center;
+    }
+
+
+    main section.left-section.flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    main section.left-section.flex button {
+        width: 7rem;
+        padding: 0.8rem 0;
+        font-size: 0.9rem;
+
+    }
+
 }

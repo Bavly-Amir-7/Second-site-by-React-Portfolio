@@ -11,11 +11,11 @@ import img8 from "./images/8.jpg";
 import img9 from "./images/9.jpg";
 
 export default function Main() {
-  const images = [img1, img2, img3, img4, img5,img6, img7, img8, img9];  // مصفوفة الصور
+  const images = [img1, img2, img3, img4, img5,img6, img7, img8, img9];  
 
   return (
     <main className='flex'>
-      <section className=' flex left-section '>
+      <section className=' flex left-section  '>
         <button className='active'>All projects</button>
         <button>HTML & CSS</button>
         <button>JavaScript</button>

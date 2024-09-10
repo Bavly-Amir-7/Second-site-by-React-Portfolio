@@ -89,3 +89,12 @@ section.hero  .icon:hover {
 
 
 /*! **************************** RIGHT SECTION ==> ANIMATION  *************************** */
+
+
+@media (max-width: 600px) {
+    .hero.flex {
+        flex-direction: column;
+        gap: 2.64rem;
+        align-items: center;
+    }
+}
