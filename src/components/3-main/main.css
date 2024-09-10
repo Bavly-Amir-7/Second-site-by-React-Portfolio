@@ -56,44 +56,66 @@ main section.left-section.flex button.active {
 /*? 2. right section ==> card */
 /* *****************************************/
 
-main section.right-section {
+main section.right-section.flex {
     /* flex-grow: 1; */
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 2rem;
+}
+
+.card1 {
+    border: 1px solid rgba(93, 188, 252, 0.3);
+    border-radius: 5px;
+    transform: 0.3s;
+    background-image: linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.05));
+}
+
+.card1:hover {
+    border: 1px solid var(--blue);
+    rotate: 1deg;
+    scale: 1.01;
+    cursor: pointer;
+}
+
+.card1 img {
+    border-radius: 5px;
 }
 
 .card1 .box {
     padding: 1rem 0.4rem;
 }
 
-.card1 .box .title{
+.card1 .box .title {
     color: var(--title);
 }
 
-.card1 .box .sub-title{
+.card1 .box .sub-title {
     color: var(--subtitle);
     font-size: 0.8rem;
     margin-top: 0.7rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.1rem;
 }
 
-.card1 .box .icons{
+.card1 .box .icons {
     justify-content: space-between;
     color: var(--subtitle);
     font-size: 1.2rem;
     cursor: pointer;
 }
 
-.card1 .box .icons .icon-link:hover ,.card1 .box .icons .icon-github:hover ,.card1 .theBtn:hover{
+.card1 .box .icons .icon-link:hover,
+.card1 .box .icons .icon-github:hover,
+.card1 .theBtn:hover {
     color: gold;
 }
 
-.iconsParent{
+.iconsParent {
     display: flex;
     gap: 11px;
 }
 
 .theBtn {
-    color: var(--subtitle);
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--blue);
     gap: 5px;
     display: flex;
