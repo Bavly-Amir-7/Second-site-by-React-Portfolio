@@ -1,0 +1,18 @@
+section.contact-us .icon-mail3{
+    color: var(--blue);
+    margin-right: 1rem;
+    font-size: 1.9rem;
+}
+
+section.contact-us.title{
+    font-size: 2.1rem;
+    color: var(--title);
+    margin-bottom: 1rem;
+}
+
+section.contact-us .sub-title{
+    color: var(--subtitle);
+    margin-bottom: 2rem;
+    line-height: 1.6rem;
+
+}
