@@ -13,18 +13,23 @@ export default function Contact() {
 
 
       <div className="flex">
-        <form className='border' action="">
-          <label htmlFor="email">Email Address:</label>
-          <input type="email" name="" id="email" placeholder="Enter your email address" />
+        <form  action="">
 
-          <label htmlFor="message">Your message:</label>
-          <textarea name="" id="message"></textarea>
+          <div className='flex'>
+            <label htmlFor="email">Email Address:</label>
+            <input required type="email" name="" id="email" placeholder="Enter your email address" />
+          </div>
 
-          <button>Submit</button>
+          <div className='flex' style={{marginTop:"24px"}}>
+            <label htmlFor="message">Your message:</label>
+            <textarea required name="" id="message"  placeholder="Enter your message here"></textarea>
+          </div>
+            <button className='submit'>Submit</button>
+
 
 
         </form>
-        <div className="animation border"></div>
+        <div className="animation border">animation</div>
       </div>
     </section>
   )

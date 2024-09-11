@@ -1,18 +1,114 @@
-section.contact-us .icon-mail3{
+section.contact-us .icon-mail3 {
     color: var(--blue);
     margin-right: 1rem;
     font-size: 1.9rem;
 }
 
-section.contact-us.title{
+section.contact-us.title {
     font-size: 2.1rem;
     color: var(--title);
     margin-bottom: 1rem;
 }
 
-section.contact-us .sub-title{
+section.contact-us .sub-title {
     color: var(--subtitle);
     margin-bottom: 2rem;
     line-height: 1.6rem;
+}
 
+section.contact-us label {
+    color: var(--subtitle);
+}
+
+
+section.contact-us #email,
+section.contact-us #message {
+    all: unset;
+    background-color: rgba(63, 63, 70, 0.15);
+    border: 1px solid rgb(63 63 70);
+    width: 16rem;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+    transform: 0.3s;
+    font-size: 1.1rem;
+}
+
+section.contact-us #email:focus,
+section.contact-us #message:focus {
+    border: 1px solid var(--blue);
+}
+
+section.contact-us #email:hover,
+section.contact-us #message:hover {
+    border: 1px solid var(--blue);
+}
+
+
+section.contact-us #message {
+    min-height: 9rem;
+    resize: both;
+    flex-direction: unset;
+}
+
+section.contact-us .submit {
+    background-color: rgb(32 32 33);
+    width: 11rem;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    font-size: 1.05rem;
+    border-radius: 5px;
+    transform: 0.3s;
+    margin-top: 1.8rem;
+    border: 1px solid rgb(63 63 70);
+    color: var(--subtitle);
+}
+
+section.contact-us .submit:hover {
+    scale: 0.97;
+    opacity: 1;
+    background-color: rgba(36, 37, 46, 1);
+    color: var(--title);
+}
+
+section.contact-us .submit.active {
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    padding: 0.8rem 0;
+    border: 1px solid var(--blue);
+
+}
+
+@media (max-width:600px) {
+
+    .animation {
+        display: none;
+    }
+
+    section.contact-us form {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    
+    }
+
+
+    section.contact-us form div.flex {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    section.contact-us #email,
+    section.contact-us #message {
+        width: 100%;
+        margin-left: 0;
+        padding: 0.7rem 0;
+        margin-top: 1rem;
+    }
+
+    section.contact-us .submit{
+        width: 40%;
+        align-self: center;
+    }
 }
