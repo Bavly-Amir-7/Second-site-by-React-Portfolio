@@ -15,17 +15,18 @@ import Footer from "./components/5-footer/Footer";
 function App() {
   return (
     <>
-      <div className='container'>
+      <div id='up' className='container'>
         <Header />
         <Hero />
-        <div className="divider"/>
+        <div className="divider" />
         <Main />
-        <div className="divider"/>
+        <div className="divider" />
         <Contact />
-        <div className="divider"/>
+        <div className="divider" />
         <Footer />
-
-        <button className='scroll2top icon-arrow-up2'></button>
+        <a href="#up">
+          <button className='scroll2top icon-arrow-up2'></button>
+        </a>
       </div>
     </>
   );
