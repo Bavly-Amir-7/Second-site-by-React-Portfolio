@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./main.css";
 import img1 from "./images/1.jpg";
 import img2 from "./images/2.jpg";
@@ -11,16 +11,18 @@ import img8 from "./images/8.jpg";
 import img9 from "./images/9.jpg";
 
 export default function Main() {
-  const images = [img1, img2, img3, img4, img5,img6, img7, img8, img9];  
+  const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+
+  const [currentActive, setcureentActive] = useState("all")
 
   return (
     <main className='flex'>
       <section className=' flex left-section  '>
-        <button className='active'>All projects</button>
-        <button>HTML & CSS</button>
-        <button>JavaScript</button>
-        <button>React & MUI</button>
-        <button>Node & Express</button>
+        <button onClick={() => { setcureentActive("all") }} className={currentActive === "all" ? "active" : null}>All projects</button>
+        <button onClick={() => { setcureentActive("css") }} className={currentActive === "css" ? "active" : null}>HTML & CSS</button>
+        <button onClick={() => { setcureentActive("js") }} className={currentActive === "js" ? "active" : null}>JavaScript</button>
+        <button onClick={() => { setcureentActive("react") }} className={currentActive === "react" ? "active" : null}>React & MUI</button>
+        <button onClick={() => { setcureentActive("node") }} className={currentActive === "node" ? "active" : null}>Node & Express</button>
       </section>
 
       <section className="right-section flex ">
