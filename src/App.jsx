@@ -24,6 +24,8 @@ function App() {
         <Contact />
         <div className="divider"/>
         <Footer />
+
+        <button className='scroll2top icon-arrow-up2'></button>
       </div>
     </>
   );
