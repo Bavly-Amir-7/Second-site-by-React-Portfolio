@@ -73,7 +73,22 @@ export default function Main() {
             return item.category === "Html" || item.category === "Css" || item.category === "Bootstrap"
           })
           setarr(newArr)
-        }} className={currentActive === "css" ? "active" : null}>Html, CSS & Bootstrap</button>
+        }} className={currentActive === "css" ? "active" : null}>Html, CSS </button>
+        {/* ******************************************************************* */}
+
+
+        {/* ******************************************************************* */}
+        {/* Bootstrap btn  */}
+
+        <button onClick={() => {
+
+
+          setcureentActive("Bootstrap");
+          const newArr = myProjects.filter((item) => {
+            return item.category === "Bootstrap"
+          })
+          setarr(newArr)
+        }} className={currentActive === "Bootstrap" ? "active" : null}> Bootstrap</button>
         {/* ******************************************************************* */}
 
         {/* ******************************************************************* */}
@@ -109,8 +124,8 @@ export default function Main() {
 
         <button onClick={() => {
           setcureentActive("Next js");
-          const newArr = myProjects.filter((item)=> {
-            return item.category === "Next js" 
+          const newArr = myProjects.filter((item) => {
+            return item.category === "Next js"
           })
           setarr(newArr)
         }} className={currentActive === "Next js" ? "active" : null}>Next js</button>
