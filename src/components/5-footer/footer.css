@@ -33,4 +33,8 @@ footer.flex p{
     ul.flex{
         align-self: start;
     }
+    footer.flex p{
+        font-size: 0.9rem;
+
+    }
 }
