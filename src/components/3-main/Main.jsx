@@ -10,55 +10,53 @@ import img7 from "./images/7.jpg";
 import img8 from "./images/8.jpg";
 import img9 from "./images/9.jpg";
 
-
-
 const myProjects = [
   {
     projectTitle: "React projects",
     category: "React",
     imgPath: img1,
+    description: "This project showcases various concepts and applications built using React. It includes hooks, components, and more."
   },
   {
     projectTitle: "Html projects",
     category: "Html",
     imgPath: img2,
+    description: "Explore foundational HTML projects that illustrate the structure and semantic features of web pages."
   },
-
   {
     projectTitle: "Css projects",
     category: "Css",
     imgPath: img3,
+    description: "A collection of CSS projects demonstrating layouts, animations, and design aesthetics for web development."
   },
   {
     projectTitle: "Scss projects",
     category: "Scss",
     imgPath: img4,
+    description: "These SCSS projects introduce advanced styling techniques, including variables, mixins, and responsive design."
   },
   {
     projectTitle: "Js projects",
     category: "Js",
     imgPath: img5,
+    description: "A variety of JavaScript projects that cover algorithms, DOM manipulation, and event-driven programming."
   },
   {
     projectTitle: "Next js projects",
     category: "Next js",
     imgPath: img6,
+    description: "A showcase of projects built using Next.js, featuring server-side rendering and static site generation."
   },
-
-
-
-]
+];
 
 export default function Main() {
-  const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+  const [currentActive, setcureentActive] = useState("all");
 
-  const [currentActive, setcureentActive] = useState("all")
-
-  const [arr, setarr] = useState(myProjects)
+  const [arr, setarr] = useState(myProjects);
 
   return (
     <main className='flex'>
-      <section className=' flex left-section  '>
+      <section className='flex left-section '>
 
         {/* ******************************************************************* */}
         {/* all projects btn  */}
@@ -67,75 +65,73 @@ export default function Main() {
         {/* ******************************************************************* */}
 
         {/* ******************************************************************* */}
-        {/* html and css btn  */}
-
+        {/* Html and css btn  */}
 
         <button onClick={() => {
-          setcureentActive("css"); setarr([
+          setcureentActive("css");
+          setarr([
             {
-              projectTitle: "html projects",
-              category: "html",
-              imgPath: img3,
+              projectTitle: "Html projects",
+              category: "Html",
+              imgPath: img2,
+              description: "Explore foundational HTML projects that illustrate the structure and semantic features of web pages."
             },
             {
-              projectTitle: "css projects",
-              category: "css",
-              imgPath: img2,
+              projectTitle: "Css projects",
+              category: "Css",
+              imgPath: img3,
+              description: "A collection of CSS projects demonstrating layouts, animations, and design aesthetics for web development."
             },
             {
               projectTitle: "Scss projects",
               category: "Scss",
               imgPath: img4,
+              description: "These SCSS projects introduce advanced styling techniques, including variables, mixins, and responsive design."
             },
-          ])
-        }} className={currentActive === "css" ? "active" : null}>HTML ,CSS & Scss</button>
+          ]);
+        }} className={currentActive === "css" ? "active" : null}>Html, CSS & Scss</button>
         {/* ******************************************************************* */}
-
-
 
         {/* ******************************************************************* */}
         {/* Js projects btn  */}
 
-
-
         <button onClick={() => {
-          setcureentActive("js"); setarr([{
+          setcureentActive("js");
+          setarr([{
             projectTitle: "Js projects",
             category: "Js",
-            imgPath: img4,
-          },])
+            imgPath: img5,
+            description: "A variety of JavaScript projects that cover algorithms, DOM manipulation, and event-driven programming."
+          }]);
         }} className={currentActive === "js" ? "active" : null}>JavaScript</button>
         {/* ******************************************************************* */}
-
-
 
         {/* ******************************************************************* */}
         {/* React projects btn  */}
 
-
         <button onClick={() => {
-          setcureentActive("react"), setarr([{
+          setcureentActive("react");
+          setarr([{
             projectTitle: "React projects",
             category: "React",
             imgPath: img1,
-          },])
+            description: "This project showcases various concepts and applications built using React. It includes hooks, components, and more."
+          }]);
         }} className={currentActive === "react" ? "active" : null}>React & MUI</button>
         {/* ******************************************************************* */}
-
-
 
         {/* ******************************************************************* */}
         {/* Next js projects btn  */}
 
-
         <button onClick={() => {
-          setcureentActive("Next js"), setarr([{
+          setcureentActive("Next js");
+          setarr([{
             projectTitle: "Next js projects",
             category: "Next js",
-            imgPath: img5,
-          },
-          ])
-        }} className={currentActive === "Next js" ? "active" : null}>Next js </button>
+            imgPath: img6,
+            description: "A showcase of projects built using Next.js, featuring server-side rendering and static site generation."
+          }]);
+        }} className={currentActive === "Next js" ? "active" : null}>Next js</button>
         {/* ******************************************************************* */}
       </section>
 
@@ -143,12 +139,11 @@ export default function Main() {
         {arr.map((item) => {
           return (
             <article key={item.imgPath} className='card1'>
-              <img width={266} src={item.imgPath} alt="" />
+              <img width={266} src={item.imgPath} alt={item.projectTitle} />
               <div style={{ width: "266px" }} className="box ">
                 <h1 className='title'>{item.projectTitle}</h1>
-                <p className='sub-title'>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nostrum iure impedit rerum quisquam dolores atque magni ea amet sunt! Eius cumque perferendis, repellat labore culpa non quae nam officiis.
-                </p>
+                <p className='sub-title'>Category: {item.category}</p>
+                <p className='description'>{item.description}</p>
 
                 <div className="flex icons">
                   <div className='iconsParent'>
