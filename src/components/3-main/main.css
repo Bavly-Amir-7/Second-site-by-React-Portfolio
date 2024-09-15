@@ -88,6 +88,7 @@ main section.right-section.flex {
 
 .card1 .box .title {
     color: var(--title);
+    font-size: 20px;
 }
 
 .card1 .box .sub-title {
