@@ -30,10 +30,10 @@ const myProjects = [
     description: "A collection of CSS projects demonstrating layouts, animations, and design aesthetics for web development."
   },
   {
-    projectTitle: "Scss projects",
-    category: "Scss",
+    projectTitle: "Bootstrap projects",
+    category: "Bootstrap",
     imgPath: img4,
-    description: "These SCSS projects introduce advanced styling techniques, including variables, mixins, and responsive design."
+    description: "These Bootstrap projects introduce advanced styling techniques, including variables, mixins, and responsive design."
   },
   {
     projectTitle: "Js projects",
@@ -69,27 +69,11 @@ export default function Main() {
 
         <button onClick={() => {
           setcureentActive("css");
-          setarr([
-            {
-              projectTitle: "Html projects",
-              category: "Html",
-              imgPath: img2,
-              description: "Explore foundational HTML projects that illustrate the structure and semantic features of web pages."
-            },
-            {
-              projectTitle: "Css projects",
-              category: "Css",
-              imgPath: img3,
-              description: "A collection of CSS projects demonstrating layouts, animations, and design aesthetics for web development."
-            },
-            {
-              projectTitle: "Scss projects",
-              category: "Scss",
-              imgPath: img4,
-              description: "These SCSS projects introduce advanced styling techniques, including variables, mixins, and responsive design."
-            },
-          ]);
-        }} className={currentActive === "css" ? "active" : null}>Html, CSS & Scss</button>
+          const newArr = myProjects.filter((item) => {
+            return item.category === "Html" || item.category === "Css" || item.category === "Bootstrap"
+          })
+          setarr(newArr)
+        }} className={currentActive === "css" ? "active" : null}>Html, CSS & Bootstrap</button>
         {/* ******************************************************************* */}
 
         {/* ******************************************************************* */}
@@ -125,12 +109,10 @@ export default function Main() {
 
         <button onClick={() => {
           setcureentActive("Next js");
-          setarr([{
-            projectTitle: "Next js projects",
-            category: "Next js",
-            imgPath: img6,
-            description: "A showcase of projects built using Next.js, featuring server-side rendering and static site generation."
-          }]);
+          const newArr = myProjects.filter((item)=> {
+            return item.category === "Next js" 
+          })
+          setarr(newArr)
         }} className={currentActive === "Next js" ? "active" : null}>Next js</button>
         {/* ******************************************************************* */}
       </section>

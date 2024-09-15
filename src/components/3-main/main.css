@@ -26,6 +26,7 @@ main section.left-section.flex button {
 main section.left-section.flex button:hover {
     opacity: 1;
 
+
 }
 
 main section.left-section.flex button.active {
@@ -34,6 +35,8 @@ main section.left-section.flex button.active {
     letter-spacing: 0.6px;
     padding: 0.8rem 0;
     border: 1px solid var(--blue);
+    font-size: 0.9rem;
+
 
 }
 
@@ -88,7 +91,7 @@ main section.right-section.flex {
 
 .card1 .box .title {
     color: var(--title);
-    font-size: 30px;
+    font-size: 29px;
 }
 
 .card1 .box .sub-title {
