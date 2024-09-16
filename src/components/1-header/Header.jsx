@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 export default function Header() {
   const [showModal, setShowModal] = useState(false);
 
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(localStorage.getItem("currentMode"));
 
   useEffect(() => {
     if (theme === "light") {
