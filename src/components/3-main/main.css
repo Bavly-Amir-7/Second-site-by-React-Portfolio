@@ -98,6 +98,10 @@ main section.right-section.flex {
     margin-bottom: 1.1rem;
 }
 
+.card1 .description {
+    color: var(--title);
+}
+
 .card1 .box .icons {
     justify-content: space-between;
     color: var(--subtitle);
