@@ -34,14 +34,27 @@ section.contact-us #message {
     font-size: 1.1rem;
 }
 
-section.contact-us #email:focus,
-section.contact-us #message:focus {
-    border: 1px solid var(--blue);
+.light section.contact-us #email,
+.light section.contact-us #message {
+    
+    background-color: rgba(63, 63, 70, 0.2);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);
+    border: 1px solid rgba(93, 188, 252, 0.3);
+    color: var(--subtitle);
 }
 
 section.contact-us #email:hover,
 section.contact-us #message:hover {
     border: 1px solid var(--blue);
+}
+section.contact-us #email:focus,
+section.contact-us #message:focus {
+    background-color: gr;
+}
+
+.light section.contact-us #email::placeholder,
+.light section.contact-us #message::placeholder {
+    color: var(--subtitle);
 }
 
 
@@ -52,15 +65,15 @@ section.contact-us #message {
 }
 
 section.contact-us .submit {
-    background-color: rgba(36, 37, 46, 1); 
+    background-color: rgba(36, 37, 46, 1);
     width: 11rem;
-    padding: 0.7rem 0; 
+    padding: 0.7rem 0;
     text-align: center;
     font-size: 1.05rem;
-    opacity: 0.5; 
+    opacity: 0.5;
     border-radius: 5px;
     transform: 0.3s;
-    border: 1px solid rgb(63 63 70); 
+    border: 1px solid rgb(63 63 70);
     margin-top: 1.8rem;
 }
 
@@ -68,7 +81,7 @@ section.contact-us .submit:hover {
     scale: 0.97;
     opacity: 1;
     color: white;
-    background-color: rgba(36, 37, 46, 1); 
+    background-color: rgba(36, 37, 46, 1);
 }
 
 section.contact-us .submit.active {
@@ -89,7 +102,7 @@ section.contact-us .submit.active {
         display: flex;
         flex-direction: column;
         width: 85%;
-    
+
     }
 
 
@@ -106,7 +119,7 @@ section.contact-us .submit.active {
         margin-top: 1rem;
     }
 
-    section.contact-us .submit{
+    section.contact-us .submit {
         width: 40%;
         align-self: center;
     }

@@ -34,6 +34,11 @@ main section.left-section.flex button.active {
     letter-spacing: 0.6px;
     padding: 0.8rem 0;
     border: 1px solid var(--blue);
+    
+}
+
+.light main section.left-section.flex button.active {
+    border: 1px solid black;
 
 }
 
@@ -65,10 +70,17 @@ main section.right-section.flex {
 }
 
 .card1 {
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);
     border: 1px solid rgba(93, 188, 252, 0.3);
     border-radius: 5px;
     transform: 0.3s;
     background-image: linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.05));
+    height: 400px;
+}
+
+.light .card1 {
+    border: none;
+
 }
 
 .card1:hover {
@@ -77,6 +89,13 @@ main section.right-section.flex {
     scale: 1.01;
     cursor: pointer;
 }
+
+
+.light .card1:hover{
+    border: 1px solid rgb(193, 169, 169);
+    background-color: rgba(246,246,246);
+
+} 
 
 .card1 img {
     border-radius: 5px;
