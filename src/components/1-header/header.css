@@ -46,6 +46,7 @@ header .theme {
     color: var(--subtitle);
     border: 1px solid rgba(244, 165, 96, 0.249);
     transition: 0.2s;
+    box-shadow: 1px 1px 40px grey;
 }
 
 
@@ -67,6 +68,9 @@ header .icon-x1 {
     transform: rotate(180deg) !important; 
 }
 
+header .icon-sun {
+    color: orange;
+}
 
 /* modal == pop up  */
 

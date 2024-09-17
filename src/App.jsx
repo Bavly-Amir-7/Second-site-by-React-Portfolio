@@ -23,7 +23,6 @@ function App() {
       } else {
         setshowScrollBtn(false)
       }
-      console.log(window.scrollY)
     }
     )
   }, [])
