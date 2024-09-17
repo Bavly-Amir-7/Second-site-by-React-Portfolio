@@ -2,14 +2,22 @@ import React from 'react';
 import "./hero.css";
 import myImage from "./myPhoto1.jpg";
 import computer from "./../../../public/animation/computer.json";
-import Lottie from 'lottie-react'; // Make sure you import Lottie
+import Lottie from 'lottie-react';
+import { motion } from "framer-motion"; // استيراد واحد فقط لـ motion
 
 export default function Hero() {
   return (
     <section className='hero flex'>
       <div className="left-section">
         <div className="parent-avatar flex">
-          <img className='avatar' src={myImage} alt='myProfilePhoto' />
+          <motion.img
+            initial={{ scale: 0 }} 
+            animate={{ scale: 1.1 }} 
+            transition={{ damping: 4, type: "spring", stiffness: 100 }} 
+            className='avatar' 
+            src={myImage} 
+            alt='myProfilePhoto' 
+          />
           <div className='icon-verified'></div>
         </div>
 
@@ -26,8 +34,7 @@ export default function Hero() {
         </div>
       </div>
 
-
-      <div className="right-section animation ">
+      <div className="right-section animation">
         <Lottie className='computer' animationData={computer} />
       </div>
     </section>
