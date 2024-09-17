@@ -2,11 +2,12 @@ import React from 'react'
 import './header.css'
 import { useState } from "react"
 import { useEffect } from 'react';
+import { dark } from '@mui/material/styles/createPalette';
 
 export default function Header() {
   const [showModal, setShowModal] = useState(false);
 
-  const [theme, setTheme] = useState(localStorage.getItem("currentMode") ?? "dark" );
+  const [theme, setTheme] = useState(localStorage.getItem("currentMode") ?? "dark");
 
   useEffect(() => {
     if (theme === "light") {
@@ -15,7 +16,7 @@ export default function Header() {
     } else {
       document.body.classList.remove("light");
       document.body.classList.add("dark");
-      
+
     }
   }, [theme]);
 
@@ -51,7 +52,10 @@ export default function Header() {
 
       }
       } className='theme flex'>
-        <span className='icon-moon'></span>
+        {theme === "dark" ? (<span className='icon-moon'></span>) : (<span className='icon-sun'></span>
+        )}
+
+
       </button>
 
 
