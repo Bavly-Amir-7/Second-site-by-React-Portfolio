@@ -77,7 +77,7 @@ section.hero  .icon:hover {
 
 
 
-.right-section {
+.hero .right-section {
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -105,10 +105,12 @@ section.hero  .icon:hover {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     .hero.flex {
         flex-direction: column;
         gap: 2.64rem;
         align-items: center;
     }
+
+  
 }
