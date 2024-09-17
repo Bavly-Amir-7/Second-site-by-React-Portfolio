@@ -62,10 +62,10 @@ section.hero .icon-github {
 }
 
 
-section.hero  .icon:hover {
+section.hero .icon:hover {
     font-size: 1.4rem;
     transition: 0.3s;
-    color: gold ;
+    color: gold;
     cursor: pointer;
 }
 
@@ -79,15 +79,15 @@ section.hero  .icon:hover {
 
 .hero .right-section {
     display: flex;
-    justify-content: center; 
-
-    padding-top: 50px;
+    justify-content: center;
+    width: 100%;
 }
 
 
 
-.computer{
-    width: 370px;
+.computer {
+    width: 90%;
+    translate: 15px 70px;
 }
 
 
@@ -111,5 +111,5 @@ section.hero  .icon:hover {
         align-items: center;
     }
 
-  
+
 }
