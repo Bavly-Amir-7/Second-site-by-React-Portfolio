@@ -110,6 +110,9 @@ section.hero .icon:hover {
         gap: 2.64rem;
         align-items: center;
     }
-
-
+    
+    
+    .computer {
+        translate: 0px 0px;
+    }
 }
