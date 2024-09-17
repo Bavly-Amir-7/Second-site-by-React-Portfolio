@@ -1,3 +1,9 @@
+.contactContainer{
+    width: 100%;
+    place-content: space-between;
+}
+
+
 section.contact-us .icon-mail3 {
     color: var(--blue);
     margin-right: 1rem;
@@ -92,6 +98,10 @@ section.contact-us .submit.active {
     border: 1px solid var(--blue);
 }
 
+.doneAnimation{
+    height: 25px;
+}
+
 @media (max-width:600px) {
 
     .animation {
@@ -124,4 +134,17 @@ section.contact-us .submit.active {
         width: 40%;
         align-self: center;
     }
+
+    .contact-us .animationDone{
+        display: ruby;
+        font-size: 14px !important;
+    }
+
+    
+}
+
+
+.contactAnimation{
+    height: 300px;
+    margin-right: 100px;
 }

@@ -77,7 +77,19 @@ section.hero  .icon:hover {
 
 
 
+.right-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+}
 
+
+
+.computer{
+    width: 70%;
+}
 
 
 
@@ -89,6 +101,8 @@ section.hero  .icon:hover {
 
 
 /*! **************************** RIGHT SECTION ==> ANIMATION  *************************** */
+
+
 
 
 @media (max-width: 600px) {

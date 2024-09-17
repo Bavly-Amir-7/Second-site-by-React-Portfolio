@@ -7,7 +7,7 @@ header.flex nav {
     background-color: var(--bgHeader);
     padding: 0.77rem 1.6rem;
     border-radius: 55px;
-    box-shadow: 1px 1px 40px #3532324a;
+    box-shadow: 1px 1px 40px rgba(128, 128, 128, 0.308);
 }
 
 header ul.flex {

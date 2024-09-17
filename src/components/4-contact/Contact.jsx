@@ -1,7 +1,18 @@
 import React from 'react'
 import "./contact.css";
+import { useForm, ValidationError } from '@formspree/react';
+import Lottie from "lottie-react";
+
+import  doneAnimation from "./../../../public/animation/done.json" ;
+import  contactUs from "./../../../public/animation/contactUs.json" ;
 
 export default function Contact() {
+
+  const [state, handleSubmit] = useForm("mwpejjvn");
+
+
+
+
   return (
     <section className='contact-us'>
       <h1 className='title'>
@@ -12,24 +23,44 @@ export default function Contact() {
 
 
 
-      <div className="flex">
-        <form  action="">
+      <div className="contactContainer flex">
+        <form onSubmit={handleSubmit}  >
 
           <div className='flex'>
             <label htmlFor="email">Email Address:</label>
-            <input required type="email" name="" id="email" placeholder="Enter your email address" />
+            <input required type="email" name="email" id="email" placeholder="Enter your email address" />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
           </div>
 
-          <div className='flex' style={{marginTop:"24px"}}>
+          <div className='flex' style={{ marginTop: "24px" }}>
             <label htmlFor="message">Your message:</label>
-            <textarea required name="" id="message"  placeholder="Enter your message here"></textarea>
+            <textarea required name="message" id="message" placeholder="Enter your message here"></textarea>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
           </div>
-            <button className='submit'>Submit</button>
+          <button className='submit' disabled={state.submitting}>{state.submitting ? "Submitting..." : "Submit"}</button>
 
+          {state.succeeded && (
+            <p className='animationDone flex' style={{ fontSize: "16px", marginTop: "1.7rem" }}>
+                <Lottie loop={false} className='doneAnimation' animationData={doneAnimation} />
 
+             
+              Your message has been sent successfully!
+            </p>
+          )}
 
         </form>
-        <div className="animation border">animation</div>
+        <div className="animation ">
+         <Lottie className='contactAnimation' animationData={contactUs} />
+        </div>
+
       </div>
     </section>
   )

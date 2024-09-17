@@ -85,6 +85,11 @@ button:active {
 }
 
 
+button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 ::-webkit-scrollbar {
     width: 0.88rem;
 }
@@ -112,7 +117,7 @@ html {
 
 
 .scroll2top {
-    background-color: blue;
+    background-color:  var(--border);
     width: 2.6rem;
     height: 2.6rem;
     border-radius: 50%;
@@ -127,7 +132,7 @@ html {
 }
 
 .scroll2top:hover {
-    background-color: var(--blue);
+    background-color: var(--subtitle);
 }
 
 
