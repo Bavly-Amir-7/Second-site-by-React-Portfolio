@@ -80,15 +80,14 @@ section.hero  .icon:hover {
 .hero .right-section {
     display: flex;
     justify-content: center; 
-    align-items: center;
-    width: 100%;
+
     padding-top: 50px;
 }
 
 
 
 .computer{
-    width: 70%;
+    width: 370px;
 }
 
 
