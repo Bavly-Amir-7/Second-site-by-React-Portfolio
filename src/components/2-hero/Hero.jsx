@@ -3,7 +3,7 @@ import "./hero.css";
 import myImage from "./myPhoto1.jpg";
 import computer from "./../../../public/animation/computer.json";
 import Lottie from 'lottie-react';
-import { motion } from "framer-motion"; // استيراد واحد فقط لـ motion
+import { motion } from "framer-motion"; 
 
 export default function Hero() {
   return (
@@ -26,11 +26,24 @@ export default function Hero() {
           I am Bavly Amir Makram, living in Giza, Egypt. A front-end developer specializing in React, dedicated to delivering modern and advanced tech solutions in my field.
         </p>
         <div className="icons flex">
-          <div className="icon icon-x"></div>
-          <div className="icon icon-github"></div>
-          <div className="icon icon-facebook1"></div>
-          <div className="icon icon-gmail"></div>
-          <div className="icon icon-linkedin"></div>
+          <a href="https://x.com/Bavly_Amir" target="_blank" rel="noopener noreferrer">
+            <div className="icon icon-x"></div>
+          </a>
+          <a href="https://github.com/Bavly-Amir-7" target="_blank" rel="noopener noreferrer">
+            <div className="icon icon-github"></div>
+          </a>
+          <a href="https://www.facebook.com/bavly.amir.35" target="_blank" rel="noopener noreferrer">
+            <div className="icon icon-facebook1"></div>
+          </a>
+          <a href="mailto:bavlyamir707@gmail.com">
+            <div className="icon icon-gmail"></div>
+          </a>
+          <a href="https://leetcode.com/u/bavly_amir7/" target="_blank" rel="noopener noreferrer">
+            <div className="icon icon-linkedin"></div>
+          </a>
+          <a href="https://x.com/Bavly_Amir" target="_blank" rel="noopener noreferrer">
+            <div className="icon icon-twitter"></div>
+          </a>
         </div>
       </div>
 
