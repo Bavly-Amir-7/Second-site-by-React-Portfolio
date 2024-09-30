@@ -9,8 +9,6 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
