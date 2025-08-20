@@ -18,14 +18,22 @@ header ul.flex {
     margin-bottom: 0;
 }
 
-header ul li a {
+header ul li a,
+header ul li button.nav-link {
     color: var(--title);
     opacity: 0.9;
     font-size: 0.88rem;
     font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-header ul li a:hover {
+header ul li a:hover,
+header ul li button.nav-link:hover {
     color: var(--blue);
     opacity: 1;
     font-size: 0.9rem;
@@ -61,13 +69,13 @@ header .theme:hover {
 header .icon-x1 {
     font-size: 1rem;
     color: var(--subtitle);
-    transition: transform 0.3s ease !important; 
+    transition: transform 0.3s ease !important;
 }
 
 .icon-x1:hover {
     font-size: 1rem;
     color: crimson;
-    transform: rotate(180deg) !important; 
+    transform: rotate(180deg) !important;
 }
 
 header .icon-sun {
@@ -111,8 +119,20 @@ header .fixed ul.modal1 {
 
 }
 
-header .fixed ul.modal1 li a {
+header .fixed ul.modal1 li a,
+header .fixed ul.modal1 li button.nav-link {
     font-size: 1rem;
+    color: var(--title);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+header .fixed ul.modal1 li button.nav-link:hover {
+    color: var(--blue);
 }
 
 header .fixed ul.modal1 li {

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // استيراد Link
 import './header.css';
 
 export default function Header() {
@@ -16,17 +15,29 @@ export default function Header() {
     }
   }, [theme]);
 
+  // Smooth scroll function
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+    setShowModal(false); // Close mobile menu after clicking
+  };
+
   return (
     <header className='flex'>
       <div className='empty' />
       <button onClick={() => setShowModal(true)} className='menu icon-menu flex'></button>
       <nav>
         <ul className='flex'>
-          <li><Link to="#">About</Link></li>
-          <li><Link to="#">Articles</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="#">Speaking</Link></li>
-          <li><Link to="#">Contact</Link></li>
+          <li><button onClick={() => scrollToSection('about')} className="nav-link">About</button></li>
+          <li><button onClick={() => scrollToSection('articles')} className="nav-link">Articles</button></li>
+          <li><button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button></li>
+          <li><button onClick={() => scrollToSection('speaking')} className="nav-link">Speaking</button></li>
+          <li><button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button></li>
         </ul>
       </nav>
       <button onClick={() => {
@@ -46,11 +57,11 @@ export default function Header() {
             <li>
               <button className="icon-x1" onClick={() => setShowModal(false)}></button>
             </li>
-            <li><Link to="#">About</Link></li>
-            <li><Link to="#">Articles</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="#">Speaking</Link></li>
-            <li><Link to="#">Uses</Link></li>
+            <li><button onClick={() => scrollToSection('about')} className="nav-link">About</button></li>
+            <li><button onClick={() => scrollToSection('articles')} className="nav-link">Articles</button></li>
+            <li><button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button></li>
+            <li><button onClick={() => scrollToSection('speaking')} className="nav-link">Speaking</button></li>
+            <li><button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button></li>
           </ul>
         </div>
       )}

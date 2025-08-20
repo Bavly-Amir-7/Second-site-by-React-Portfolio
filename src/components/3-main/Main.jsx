@@ -1,54 +1,71 @@
 import React, { useState } from 'react';
 import "./main.css";
-import img1 from "./images/1.jpg";
-import img2 from "./images/2.jpg";
-import img3 from "./images/3.jpg";
-import img4 from "./images/4.jpg";
-import img5 from "./images/5.jpg";
-import img6 from "./images/6.jpg";
+import { myProjects } from './myProjects';
 import { AnimatePresence, motion } from 'framer-motion';
+import Swal from 'sweetalert2';
 
-const myProjects = [
-  {
-    projectTitle: "React projects",
-    category: "React",
-    imgPath: img1,
-    description: "This project showcases various concepts and applications built using React. It includes hooks, components, and more."
-  },
-  {
-    projectTitle: "Html projects",
-    category: "Html",
-    imgPath: img2,
-    description: "Explore foundational HTML projects that illustrate the structure and semantic features of web pages."
-  },
-  {
-    projectTitle: "Css projects",
-    category: "Css",
-    imgPath: img3,
-    description: "A collection of CSS projects demonstrating layouts, animations, and design aesthetics for web development."
-  },
-  {
-    projectTitle: "Bootstrap projects",
-    category: "Bootstrap",
-    imgPath: img4,
-    description: "These Bootstrap projects introduce advanced styling techniques, including variables, mixins, and responsive design."
-  },
-  {
-    projectTitle: "Js projects",
-    category: "Js",
-    imgPath: img5,
-    description: "A variety of JavaScript projects that cover algorithms, DOM manipulation, and event-driven programming."
-  },
-  {
-    projectTitle: "Next js projects",
-    category: "Next js",
-    imgPath: img6,
-    description: "A showcase of projects built using Next.js, featuring server-side rendering and static site generation."
-  },
-];
+// Function to show project details in modal
+const showProjectModal = (project) => {
+  // Check if current theme is light or dark
+  const isLightMode = document.body.classList.contains('light');
+
+  const projectsHtml = project.projects.map(proj => `
+    <div style="
+      border: 1px solid ${isLightMode ? '#e0e0e0' : '#444'};
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px 0;
+      text-align: left;
+      background: ${isLightMode ? '#fafafa' : '#2a2a2a'};
+      color: ${isLightMode ? '#333' : '#e0e0e0'};
+    ">
+      <h4 style="color: #2196F3; margin-bottom: 10px; font-weight: 600;">${proj.title}</h4>
+      <p style="margin-bottom: 10px; line-height: 1.6; color: ${isLightMode ? '#555' : '#ccc'};">${proj.description}</p>
+      <p style="margin-bottom: 15px; color: ${isLightMode ? '#666' : '#aaa'};"><strong>Technologies:</strong> ${proj.tech}</p>
+      ${proj.url !== '#' ? `<a href="${proj.url}" target="_blank" style="
+        background: #2196F3;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 500;
+        transition: background 0.3s ease;
+      " onmouseover="this.style.background='#1976D2'" onmouseout="this.style.background='#2196F3'">Visit Project</a>` : '<span style="color: #999;">Link not available</span>'}
+    </div>
+  `).join('');
+
+  Swal.fire({
+    title: project.projectTitle,
+    html: `
+      <div style="text-align: left; color: ${isLightMode ? '#333' : '#e0e0e0'};">
+        <p style="margin-bottom: 20px; font-size: 16px; line-height: 1.6; color: ${isLightMode ? '#555' : '#ccc'};">${project.description}</p>
+        <div style="
+          background: ${isLightMode ? '#f8f9fa' : '#1e1e1e'};
+          padding: 20px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          border: 1px solid ${isLightMode ? '#e9ecef' : '#333'};
+        ">
+          <h3 style="color: ${isLightMode ? '#333' : '#e0e0e0'}; margin-bottom: 15px; font-weight: 600;">Projects:</h3>
+          ${projectsHtml}
+        </div>
+      </div>
+    `,
+    width: '80%',
+    confirmButtonText: 'Close',
+    confirmButtonColor: '#2196F3',
+    background: isLightMode ? '#ffffff' : '#2d2d2d',
+    color: isLightMode ? '#333333' : '#e0e0e0',
+    customClass: {
+      popup: 'custom-swal-popup',
+      title: 'custom-swal-title'
+    }
+  });
+};
 
 export default function Main() {
-  const [currentActive, setCurrentActive] = useState("all"); 
+  const [currentActive, setCurrentActive] = useState("all");
   const [arr, setArr] = useState(myProjects);
 
   return (
@@ -98,20 +115,20 @@ export default function Main() {
               transition={{ type: "spring", damping: 8, stiffness: 50 }}
               className='card1'
             >
-              <img width={266} src={item.imgPath} alt={item.projectTitle} />
-              <div style={{ width: "266px" }} className="box">
+              <img src={item.imgPath} alt={item.projectTitle} />
+              <div className="box">
                 <h1 className='title'>{item.projectTitle}</h1>
                 <p className='sub-title'>Category: {item.category}</p>
                 <p className='description'>{item.description}</p>
                 <div className="flex icons">
                   <div className='iconsParent'>
-                    <div className='icon-link'></div>
-                    <div className='icon-github'></div>
+                    <div className='icon-link' onClick={() => item.liveUrl && item.liveUrl !== '#' && window.open(item.liveUrl, '_blank')} style={{ cursor: item.liveUrl && item.liveUrl !== '#' ? 'pointer' : 'default', opacity: item.liveUrl && item.liveUrl !== '#' ? 1 : 0.5 }}></div>
+                    <div className='icon-github' onClick={() => item.githubUrl && item.githubUrl !== '#' && window.open(item.githubUrl, '_blank')} style={{ cursor: item.githubUrl && item.githubUrl !== '#' ? 'pointer' : 'default', opacity: item.githubUrl && item.githubUrl !== '#' ? 1 : 0.5 }}></div>
                   </div>
                   <div className="link flex">
-                    <a className='theBtn flex' href="#">more
+                    <button className='theBtn flex' onClick={() => showProjectModal(item)} style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer' }}>more
                       <span style={{ alignSelf: "center" }} className='icon-arrow-right2'></span>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>

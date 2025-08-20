@@ -9,6 +9,116 @@ html {
     box-sizing: border-box;
 }
 
+/* Articles and Speaking sections hover effects */
+article:hover,
+#speaking .grid > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(33, 150, 243, 0.2);
+}
+
+#articles button:hover,
+#speaking button:hover {
+    background: #1976D2 !important;
+    transform: scale(1.05);
+}
+
+/* Custom Article Modal Styles */
+.custom-article-modal {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.light .custom-article-modal {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.custom-article-content {
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #2196F3 #f1f1f1 !important;
+}
+
+.custom-article-content::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.custom-article-content::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 10px !important;
+}
+
+.custom-article-content::-webkit-scrollbar-thumb {
+    background: #2196F3 !important;
+    border-radius: 10px !important;
+}
+
+.custom-article-content::-webkit-scrollbar-thumb:hover {
+    background: #1976D2 !important;
+}
+
+/* Light mode styles */
+.custom-article-content pre {
+    background: #f8f9fa !important;
+    border: 1px solid #e9ecef !important;
+    font-family: 'Courier New', monospace !important;
+    font-size: 0.9rem !important;
+    color: #333 !important;
+}
+
+.custom-article-content code {
+    background: #f8f9fa !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-family: 'Courier New', monospace !important;
+    color: #e83e8c !important;
+}
+
+/* Dark mode styles for modal content */
+.swal2-popup[data-theme="dark"] .custom-article-content pre {
+    background: #2a2a2a !important;
+    border: 1px solid #444 !important;
+    color: #e0e0e0 !important;
+}
+
+.swal2-popup[data-theme="dark"] .custom-article-content code {
+    background: #2a2a2a !important;
+    color: #ffc107 !important;
+}
+
+.swal2-popup[data-theme="dark"] .custom-article-content h3 {
+    color: inherit !important;
+}
+
+/* Responsive grid improvements */
+@media (max-width: 768px) {
+    #articles > div > div,
+    #speaking > div > div > div {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    #articles article,
+    #speaking .grid > div {
+        padding: 1.5rem !important;
+    }
+
+    .custom-article-modal {
+        width: 95% !important;
+        margin: 10px !important;
+    }
+
+    .custom-article-content {
+        max-height: 60vh !important;
+    }
+
+    .custom-article-content pre {
+        font-size: 0.8rem !important;
+        padding: 0.8rem !important;
+    }
+}
+
 
 * {
     margin: 0;

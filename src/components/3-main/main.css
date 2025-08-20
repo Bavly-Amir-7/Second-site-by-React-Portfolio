@@ -34,7 +34,7 @@ main section.left-section.flex button.active {
     letter-spacing: 0.6px;
     padding: 0.8rem 0;
     border: 1px solid var(--blue);
-    
+
 }
 
 .light main section.left-section.flex button.active {
@@ -67,6 +67,7 @@ main section.right-section.flex {
     column-gap: 16px;
     row-gap: 2rem;
     justify-content: center;
+    align-items: stretch;
 }
 
 .card1 {
@@ -75,7 +76,10 @@ main section.right-section.flex {
     border-radius: 5px;
     transform: 0.3s;
     background-image: linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.05));
-    height: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    width: 266px;
 }
 
 .light .card1 {
@@ -95,30 +99,59 @@ main section.right-section.flex {
     border: 1px solid rgb(193, 169, 169);
     background-color: rgba(246,246,246);
 
-} 
+}
 
 .card1 img {
     border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .card1 .box {
     padding: 1rem 0.4rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card1 .box .title {
     color: var(--title);
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 48px;
 }
 
 .card1 .box .sub-title {
     color: var(--subtitle);
     font-size: 0.8rem;
-    margin-top: 0.7rem;
-    margin-bottom: 1.1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+    word-wrap: break-word;
 }
 
 .card1 .description {
     color: var(--title);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .card1 .box .icons {
@@ -126,6 +159,8 @@ main section.right-section.flex {
     color: var(--subtitle);
     font-size: 1.2rem;
     cursor: pointer;
+    margin-top: auto;
+    padding-top: 0.5rem;
 }
 
 .card1 .box .icons .icon-link:hover,
@@ -150,6 +185,49 @@ main section.right-section.flex {
     font-size: 1rem;
 }
 
+/* Custom SweetAlert2 Styles */
+.custom-swal-popup {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.light .custom-swal-popup {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.custom-swal-title {
+    color: #2196F3 !important;
+    font-weight: bold !important;
+    font-size: 24px !important;
+}
+
+.swal2-html-container {
+    max-height: 400px !important;
+    overflow-y: auto !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #2196F3 #f1f1f1 !important;
+}
+
+.swal2-html-container::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.swal2-html-container::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 10px !important;
+}
+
+.swal2-html-container::-webkit-scrollbar-thumb {
+    background: #2196F3 !important;
+    border-radius: 10px !important;
+}
+
+.swal2-html-container::-webkit-scrollbar-thumb:hover {
+    background: #1976D2 !important;
+}
+
 @media (max-width: 600px) {
     main.flex {
         flex-direction: column;
@@ -169,7 +247,27 @@ main section.right-section.flex {
         width: 7rem;
         padding: 0.8rem 0;
         font-size: 0.9rem;
-        
+
+    }
+
+    .custom-swal-popup {
+        width: 95% !important;
+        margin: 10px !important;
+    }
+
+    .card1 {
+        width: 100%;
+        max-width: 300px;
+        min-width: 250px;
+        height: 400px;
+    }
+
+    .card1 .box .title {
+        font-size: 16px;
+    }
+
+    .card1 .description {
+        font-size: 0.85rem;
     }
 
 }
