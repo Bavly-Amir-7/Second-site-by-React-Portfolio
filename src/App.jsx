@@ -93,6 +93,14 @@ function App() {
         <section id="about">
           <Hero />
         </section>
+
+        <div className="divider" />
+        <section id="projects">
+          <Main />
+        </section>
+
+
+
         <div className="divider" />
         <section id="articles">
           <div style={{ padding: '4rem 0' }}>
@@ -348,10 +356,7 @@ function App() {
             </div>
           </div>
         </section>
-        <div className="divider" />
-        <section id="projects">
-          <Main />
-        </section>
+
         <div className="divider" />
         <section id="speaking">
           <div style={{ padding: '4rem 0' }}>

@@ -34,8 +34,8 @@ export default function Header() {
       <nav>
         <ul className='flex'>
           <li><button onClick={() => scrollToSection('about')} className="nav-link">About</button></li>
-          <li><button onClick={() => scrollToSection('articles')} className="nav-link">Articles</button></li>
           <li><button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button></li>
+          <li><button onClick={() => scrollToSection('articles')} className="nav-link">Articles</button></li>
           <li><button onClick={() => scrollToSection('speaking')} className="nav-link">Speaking</button></li>
           <li><button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button></li>
         </ul>
